@@ -12,7 +12,7 @@ ARG OPENCLAW_VERSION=latest
 FROM ghcr.io/openclaw/openclaw:${OPENCLAW_VERSION} AS openclaw
 
 # ── Stage 2: Runtime ──
-FROM node:22-slim
+FROM node:24-slim
 ARG OPENCLAW_VERSION=latest
 ARG DEV_MODE=false
 # DEV_MODE intentionally not baked into runtime ENV — defaults to unset so
